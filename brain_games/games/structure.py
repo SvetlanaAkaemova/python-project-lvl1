@@ -25,7 +25,7 @@ def answer():
 
 def wrong_answer(UserAnswer, CorrectAnswer, name):
     print(f"'{UserAnswer}' is wrong answer ;(. Correct answer was '{CorrectAnswer}'.\
-          Let's try again, {name}!")
+        Let's try again, {name}!")
 
 
 def correct():
