@@ -18,7 +18,7 @@ def gcd_fn():  # noqa: C901
             if a % divider != 0 or b % divider != 0:
                 continue
             elif a % divider == 0 and b % divider == 0:
-                given_numbers = f' {a} {b}'
+                given_numbers = f'{a} {b}'
                 question(given_numbers)
                 break
         user_answer = int(answer())
