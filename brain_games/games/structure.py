@@ -25,6 +25,13 @@ def is_prime(number):
     return 'yes'
 
 
+def is_even_number(number):
+    if number % 2 == 0:
+        return 'yes'
+    else:
+        return 'no'
+
+
 def question(task):
     print(f'Question: {task}')
 
@@ -52,6 +59,7 @@ if __name__ == '__main__':
     greeting()
     user_name  # noqa: F821
     is_prime(number)  # noqa: F821
+    is_even_number(number)  # noqa: F821
     question(task)  # noqa: F821
     answer()
     wrong_answer(UserAnswer, CorrectAnswer, name)  # noqa: F821

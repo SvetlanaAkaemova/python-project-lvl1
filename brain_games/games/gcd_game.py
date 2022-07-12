@@ -10,14 +10,14 @@ def gcd_fn():  # noqa: C901
     print('Find the greatest common divisor of given numbers.')
     count = 0
     for _ in range(NUMBER_OF_ROUNDS):
-        for divisor in range(3, 25):
-            divisor = random.randint(3, 25)
-            data = [y for y in range(3, 101) if y % divisor == 0]
-            a = random.choice(data)
-            b = random.choice(data)
-            if a % divisor != 0 or b % divisor != 0:
+        for divider in range(3, 25):
+            divider = random.randint(3, 25)
+            random_list = [num for num in range(3, 101) if num % divider == 0]
+            a = random.choice(random_list)
+            b = random.choice(random_list)
+            if a % divider != 0 or b % divider != 0:
                 continue
-            elif a % divisor == 0 and b % divisor == 0:
+            elif a % divider == 0 and b % divider == 0:
                 given_numbers = f' {a} {b}'
                 question(given_numbers)
                 break
