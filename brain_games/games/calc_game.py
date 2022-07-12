@@ -15,7 +15,7 @@ def calc():
         random_choice = str(a) + random.choice(action) + str(b)
         correct_answer = eval(random_choice)
         question(random_choice)
-        user_answer = answer()
+        user_answer = int(answer())
         if user_answer != correct_answer:
             wrong_answer(user_answer, correct_answer, user_name)
             break

@@ -21,7 +21,7 @@ def gcd_fn():  # noqa: C901
                 given_numbers = f' {a} {b}'
                 question(given_numbers)
                 break
-        user_answer = answer()
+        user_answer = int(answer())
         correct_answer = gcd(a, b)
         if user_answer != correct_answer:
             wrong_answer(user_answer, correct_answer, user_name)

@@ -14,18 +14,28 @@ def greeting():
 NUMBER_OF_ROUNDS = 3
 
 
+def is_prime(number):
+    if number < 2:
+        return 'no'
+    divider = 2
+    while divider <= number / 2:
+        if number % divider == 0:
+            return 'no'
+        divider += 1
+    return 'yes'
+
+
 def question(task):
     print(f'Question: {task}')
 
 
 def answer():
-    UserAnswer = int(prompt.string('Your answer: '))
+    UserAnswer = prompt.string('Your answer: ')
     return UserAnswer
 
 
 def wrong_answer(UserAnswer, CorrectAnswer, name):
-    print(f"'{UserAnswer}' is wrong answer ;(. Correct answer was '{CorrectAnswer}'.\
-    Let's try again, {name}!")
+    print(f"'{UserAnswer}' is wrong answer ;(. Correct answer was '{CorrectAnswer}'.\nLet's try again, {name}!")
 
 
 def correct():
@@ -40,6 +50,7 @@ if __name__ == '__main__':
     welcome_to()
     greeting()
     user_name  # noqa: F821
+    is_prime(number)  # noqa: F821
     question(task)  # noqa: F821
     answer()
     wrong_answer(UserAnswer, CorrectAnswer, name)  # noqa: F821

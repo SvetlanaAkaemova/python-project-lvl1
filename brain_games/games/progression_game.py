@@ -18,7 +18,7 @@ def progression():
         changed_progression = progression_str.replace(str(hidden_number), '..')
         question(changed_progression)
         correct_answer = hidden_number
-        user_answer = answer()
+        user_answer = int(answer())
         if user_answer != correct_answer:
             wrong_answer(user_answer, correct_answer, user_name)
             break
