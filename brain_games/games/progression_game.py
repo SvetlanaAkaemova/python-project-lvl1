@@ -9,7 +9,7 @@ def progression():
     print('What number is missing in the progression?')
     count = 0
     for _ in range(NUMBER_OF_ROUNDS):
-        start = random.randint(1, 12)
+        start = random.randint(5, 12)
         step = random.randint(2, 7)
         stop = start + step * 10
         progression_list = list(range(start, stop, step))
