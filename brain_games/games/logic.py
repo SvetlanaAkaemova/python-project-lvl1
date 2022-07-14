@@ -1,9 +1,9 @@
 import prompt
 
 
-WELCOME = f"{'Welcome to the Brain Games!'}"
+WELCOME = 'Welcome to the Brain Games!'
 NUMBER_OF_ROUNDS = 3
-CORRECT = f"{'Correct!'}"
+CORRECT = 'Correct!'
 
 
 def greeting():
@@ -12,17 +12,9 @@ def greeting():
     return user_name
 
 
-def question(task):
-    print(f'Question: {task}')
-
-
-def answer():
-    user_answer = prompt.string('Your answer: ')
-    return user_answer
-
-
 def wrong_answer(UserAnswer, CorrectAnswer, name):
-    print(f"'{UserAnswer}' is wrong answer ;(. Correct answer was '{CorrectAnswer}'.\nLet's try again, {name}!")
+    print(f"'{UserAnswer}' is wrong answer ;(. Correct answer was '{CorrectAnswer}'.\
+        Let's try again, {name}!")
 
 
 def congrats(name):
