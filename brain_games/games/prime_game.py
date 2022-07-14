@@ -1,27 +1,28 @@
 import random
-from brain_games.games.structure import welcome_to, greeting, NUMBER_OF_ROUNDS,\
-    is_prime, question, answer, wrong_answer, correct, congrats
+import prompt
 
 
-def prime_fn():
-    welcome_to()
-    user_name = greeting()
-    print('Answer "yes" if given number is prime. Otherwise answer "no".')
-    count = 0
-    for _ in range(NUMBER_OF_ROUNDS):
-        random_number = random.randint(1, 37)
-        correct_answer = is_prime(random_number)
-        question(random_number)
-        user_answer = answer()
-        if user_answer != correct_answer:
-            wrong_answer(user_answer, correct_answer, user_name)
-            break
-        elif user_answer == correct_answer:
-            correct()
-            count += 1
-    else:
-        congrats(user_name)
+GAME_TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+
+
+def is_prime(number):
+    if number < 2:
+        return 'no'
+    divider = 2
+    while divider <= number / 2:
+        if number % divider == 0:
+            return 'no'
+        divider += 1
+    return 'yes'
+
+
+def game():
+    random_number = random.randint(1, 37)
+    correct_answer = is_prime(random_number)
+    print(f'Question: {random_number}')
+    user_answer = prompt.string('Your answer: ')
+    return correct_answer, user_answer
 
 
 if __name__ == '__main__':
-    prime_fn()
+    game()
