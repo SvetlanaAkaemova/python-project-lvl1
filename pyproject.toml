@@ -1,9 +1,13 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = "5 simple interactive math games"
+description = "Five simple interactive math games"
 authors = ["svetlana_akaemova <akaemova.sv@mail.ru>"]
 repository = "https://github.com/SvetlanaAkaemova/python-project-lvl1.git"
+classifiers = [
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
 packages = [
   { include = "brain_games" },
 ]
