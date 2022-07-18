@@ -1,5 +1,4 @@
 import random
-import prompt
 
 
 GAME_TASK = 'What number is missing in the progression?'
@@ -13,10 +12,9 @@ def game():
     hidden_number = random.choice(progression_list)
     progression_str = " ".join(map(str, progression_list))
     changed_progression = progression_str.replace(str(hidden_number), '..')
-    print(f'Question: {changed_progression}')
+    task = changed_progression
     correct_answer = hidden_number
-    user_answer = int(prompt.string('Your answer: '))
-    return correct_answer, user_answer
+    return task, correct_answer
 
 
 if __name__ == '__main__':

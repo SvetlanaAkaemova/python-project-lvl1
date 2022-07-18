@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import brain_games.games.calc_game
-from brain_games.games.logic import run_game
+from brain_games.logic import run_game
 
 
 def main():

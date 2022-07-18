@@ -1,5 +1,4 @@
 import random
-import prompt
 from math import gcd
 
 
@@ -16,11 +15,10 @@ def game():
             continue
         elif a % divider == 0 and b % divider == 0:
             given_numbers = f'{a} {b}'
-            print(f'Question: {given_numbers}')
+            task = given_numbers
             break
     correct_answer = gcd(a, b)
-    user_answer = int(prompt.string('Your answer: '))
-    return correct_answer, user_answer
+    return task, correct_answer
 
 
 if __name__ == '__main__':
