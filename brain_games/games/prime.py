@@ -2,8 +2,8 @@ import random
 
 
 GAME_RULE = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-FIRST = 1
-SECOND = 50
+MINIMUM_VALUE = 1
+MAXIMUM_VALUE = 50
 
 
 def is_prime(number):
@@ -18,8 +18,8 @@ def is_prime(number):
 
 
 def task_and_correct_answer():
-    task = random.randint(FIRST, SECOND)
-    if is_prime(task) is True:
+    task = random.randint(MINIMUM_VALUE, MAXIMUM_VALUE)
+    if is_prime(task):
         correct_answer = 'yes'
     else:
         correct_answer = 'no'

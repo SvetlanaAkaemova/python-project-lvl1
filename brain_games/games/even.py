@@ -2,8 +2,8 @@ import random
 
 
 GAME_RULE = 'Answer "yes" if the number is even, otherwise answer "no".'
-FIRST = 1
-SECOND = 30
+MINIMUM_VALUE = 1
+MAXIMUM_VALUE = 30
 
 
 def is_even(number):
@@ -11,8 +11,8 @@ def is_even(number):
 
 
 def task_and_correct_answer():
-    task = random.randint(FIRST, SECOND)
-    if is_even(task) is True:
+    task = random.randint(MINIMUM_VALUE, MAXIMUM_VALUE)
+    if is_even(task):
         correct_answer = 'yes'
     else:
         correct_answer = 'no'
