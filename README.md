@@ -1,6 +1,8 @@
+# Brain Games
+
 The package contains five simple text-based math games with the user. 
 
-Requirements:
+### Requirements:
 python = "^3.10"
 pip = "^22.1"
 
