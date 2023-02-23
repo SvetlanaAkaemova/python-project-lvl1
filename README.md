@@ -3,8 +3,8 @@
 The package contains five simple text-based math games with the user. 
 
 ### Requirements:
-python = "^3.10"
-pip = "^22.1"
+* python = "^3.10"
+* pip = "^22.1"
 
 You can install the package by calling the command:
 python3 -m pip install --user git+https://github.com/SvetlanaAkaemova/python-project-lvl1.git
